@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+<body>
+    <h1>Exercice 2</h1>
+    <h2>Opérations sur les variables</h2>
+
+    <button>Afficher les résultats des opérations</button>
+    <p id="somme"></p>
+    <p id="difference"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+
+    <script>
+        // Déclaration des variables a et b
+        let a = 56;
+        let b = 31;
+
+        // les opérations
+        console.log("Somme : ", a + b); // exemple 1
+
+        // ou exemple 2
+        const somme = a + b;
+        const difference = b - a;
+        const multiplication = a * b;
+        const division = a / b;
+
+        console.log("Somme : " + somme);
+        console.log("Différence : " + difference);
+        console.log("Multiplication : " + multiplication);
+        console.log("Division : " + division);
+
+        // Exemple d'affichage dans la page HTML avec DOM
+        // console.log(window); // super global object
+        // console.log(window.document); // document object
+
+        // Ecouteur d'événement de clic sur le bouton
+
+        // selection de l'élément bouton
+        // const button = window.document.querySelector("button");
+        const btnElt = document.querySelector("button");
+        console.log(btnElt);
+        
+        // Ajout de l'écouteur d'événement
+        btnElt.addEventListener('click', function () {
+            // console.log("Bouton cliqué !");
+            const pSomme = document.querySelector("#somme");
+            pSomme.textContent = "a + b = " + somme;
+
+            document.querySelector("#difference").textContent = "b - a = " + difference;
+            document.querySelector("#multiplication").textContent = "a * b = " + multiplication;
+            document.querySelector("#division").textContent = "a / b = " + division;
+        })
+    </script>
+</body>
+</html>

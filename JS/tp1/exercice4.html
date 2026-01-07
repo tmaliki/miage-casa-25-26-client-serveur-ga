@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <h1>Exercice 4</h1>
+
+    <script>
+        // fonction nommée
+        function carre(x) {
+            // return x * x;
+            return x ** 2;
+        }
+
+        // test de la fonction
+        const a = carre(3);
+        console.log(a);      // Affiche 9
+        console.log(carre(2));  // Affiche 4
+
+        // fonction anonyme affectée à une variable
+        const carre2 = function(x) {
+            return x ** 2;
+        };
+
+        // test de la fonction anonyme
+        const b = carre2(4);
+        console.log(b);      // Affiche 16
+
+        // fonction fléchée
+        const carre3 = (x) => {
+            return x ** 2;
+        }
+        // forme simplifiée de la fonction fléchée
+        const carre4 = (x) => x ** 2;
+
+        // test des fonctions fléchées
+        console.log(carre3(5));  // Affiche 25
+        console.log(carre4(6));  // Affiche 36
+    </script>
+</body>
+</html>
