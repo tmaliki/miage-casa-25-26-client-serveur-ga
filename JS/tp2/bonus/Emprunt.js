@@ -15,7 +15,7 @@ export class Emprunt {
         console.log("**********************************************")
     }
 
-    estEnRetour() {
+    estEnRetard() {
         // Durée d'emprunt autiorisée : 15jours max
         const dureeAutorisee = 15;
 
