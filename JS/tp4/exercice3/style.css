@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#msg {
+    font-weight: bold;
+    color: red;
+}
+
+#scrollBox {
+    width: 300px;
+    height: 150px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 10px;
+}

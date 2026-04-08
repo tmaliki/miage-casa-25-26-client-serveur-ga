@@ -1,8 +1,6 @@
 // Déclaration d'une classe en JS
 class Personne {
-
     // this : fait réference à la classe Personne
-    
     constructor(n, a) {
         // affectation de valeur aux propriétés
         this.nom = n;
