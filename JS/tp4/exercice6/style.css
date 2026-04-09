@@ -1,0 +1,11 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    margin: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
