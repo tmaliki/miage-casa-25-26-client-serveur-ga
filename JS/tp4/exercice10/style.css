@@ -1,0 +1,16 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    margin: 5px;
+}
+
+.dark {
+    background: black;
+    color: white;
+}
+
+.completed {
+    text-decoration: line-through;
+}
