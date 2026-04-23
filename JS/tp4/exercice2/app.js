@@ -9,7 +9,11 @@ console.log(eltBtn);
 // Ecoutons l'évenement de click sur le bouton
 eltBtn.addEventListener("click", () => {
     // console.log("J'ai cliqué")
-    // Ajouter la classe "dark" à la div
+
+    // eltCard.classList.add("dark"); // ajout la classe dark
+    // eltCard.classList.remove("dark"); // supprime la classe dark
+
+    // Ajout ou suppression de la classe "dark"
     eltCard.classList.toggle("dark");
 })
 
