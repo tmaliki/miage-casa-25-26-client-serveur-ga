@@ -1,0 +1,10 @@
+### Initialisation d'un projet node.js
+$ npm init
+$
+$ # l'option -y ignore l'étape des questions
+$ npm init -y
+$
+
+### Installation du package nodemon en mode développement
+$ npm install --save-dev nodemon
+$
