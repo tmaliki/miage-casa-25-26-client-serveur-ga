@@ -5,6 +5,25 @@ $ # l'option -y ignore l'étape des questions
 $ npm init -y
 $
 
+### Démarrage d'un projet existant
+$ npm install
+$
+
+### lancement d'un projet node
+$ node server.js
+$
+
+### lancement d'un projet à partir d'un script
+$ npm start
+$
+$ # Ou avec nodemon
+$ npm run dev
+$
+
 ### Installation du package nodemon en mode développement
 $ npm install --save-dev nodemon
+$
+
+### Installation du framework express.js
+$ npm install express
 $
