@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
 
 form.addEventListener('submit', (evt) => {
+    // Désactive le comportement par défaut du formulaire (rechargement de la page)
     evt.preventDefault(); // Désactiver l'évenement par défaut du formulaire
     // console.log(evt);
 
@@ -14,12 +15,12 @@ form.addEventListener('submit', (evt) => {
     errNom.textContent = "";
     errEmail.textContent = "";
 
-    // Condition
-    if (nom.value === "") {
+    //Condtion de validation
+    if (nom.value.trim() === "") {
         errNom.textContent = "Le champs nom est requis!";
     }
 
-    if (email.value === "" && !email.value.includes("@")) {
+    if (email.value === "" || !email.value.trim().includes("@")) {
         errEmail.textContent = "Le format d'email est invalide!";
     }
 });
