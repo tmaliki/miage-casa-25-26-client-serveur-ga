@@ -18,13 +18,60 @@ app.get("/products", (req, res) => {
 
 // Route pour créer/ajouter un produit
 app.post("/products", (req, res) => {
-    // { id: 1, name: "prod1", description: "prod1", price: 10.50 }
+    /**
+    {
+        "id": 1,
+        "name": "prod1",
+        "description": "prod1",
+        "price": 10.50
+    }
+     */
     const newProduct = req.body;
     products.push(newProduct);
     res.status(201).json({
         message: "Produit ajouté avec succès",
         resultat: newProduct
     });
+});
+
+// Route pour modifier un produit par son id
+app.put("/products/:id", (req, res) => {
+    const productId = req.params.id;
+    const { name, description, price } = req.body;
+
+    const index = products.findIndex((p) => p.id === parseInt(productId));
+    if (index === -1) {
+        res.status(404).json({ error : "Produit non trouvé" });
+    } else {
+        products[index] = { id: productId, name, description, price };
+        res.status(201).json({
+            message: "Produit modifié avec succès",
+            resultat: products[index]
+        });
+    }
+});
+
+// Route pour afficher les informations d'un produit par id
+app.get("/products/:id", (req, res) => {
+    const productId = req.params.id;
+    const productInfo = products.find((p) => p.id === parseInt(productId));
+    if (productInfo) {
+        res.status(200).json(productInfo);
+    } else {
+        res.status(404).json({ error: "Produit non trouvé" });
+    }
+});
+
+// Route pour supprimer un produit par son id
+app.delete("/products/:id", (req, res) => {
+    const productId = req.params.id;
+    const prod = products.find((p) => p.id === parseInt(productId));
+    if (prod) {
+        products = products.filter((p) => p.id !== parseInt(productId));
+        res.status(200).json({ message: "Produit supprimé avec succès" });
+    } else {
+        res.status(404).json({ error: "Produit non trouvé" });
+    }
 });
 
 // Erreur 404 (URL not found)
